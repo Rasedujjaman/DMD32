@@ -120,6 +120,10 @@ class DMD
     DMD(byte panelsWide, byte panelsHigh);
 	//virtual ~DMD();
 
+  
+  // Set the brightness level of the display (0 to 255)   
+  void setBrightness(uint8_t brightness);
+  
   //Set or clear a pixel at the x and y location (0,0 is the top left corner)
   void writePixel( unsigned int bX, unsigned int bY, byte bGraphicsMode, byte bPixel );
 

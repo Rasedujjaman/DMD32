@@ -562,6 +562,12 @@ int DMD::charWidth(const unsigned char letter)
 }
 
 
+//////////////////////////////////////// Newly Added //////////////////////////////
 
-
-
+// Method to set the brightness (0 to 255)
+void DMD::setBrightness(uint8_t brightness)
+{
+    // Set the PWM duty cycle based on the brightness (0-255)
+    // ESP32 PWM works in 8-bit resolution, so brightness range is from 0 (off) to 255 (full brightness)
+    ledcWrite(0, brightness);
+}
